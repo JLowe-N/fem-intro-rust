@@ -1,7 +1,8 @@
 fn main() {
     let numbers = vec![2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
+    let num_length = numbers.len();
 
-    let sum_of_nums = sum(&numbers);
+    let sum_of_nums = sum(&numbers[0..num_length]);
     let product_of_nums = product(&numbers); // 👉 TODO call product() and put answer here
     let average_of_nums = average(numbers); // 👉 TODO call average() and put answer here
 
@@ -18,7 +19,7 @@ fn main() {
     println!("Average of these numbers: {}", average_of_nums);
 }
 
-fn sum(numbers: &Vec<i64>) -> i64 {
+fn sum(numbers: &[i64]) -> i64 {
     let mut total = 0;
 
     for num in numbers.iter() {
@@ -41,5 +42,5 @@ fn product(numbers: &Vec<i64>) -> i64 {
 fn average(numbers: Vec<i64>) -> i64 {
     let length = numbers.len() as i64;
 
-    sum(&numbers) / length
+    sum(&numbers[0..numbers.len()]) / length
 }
