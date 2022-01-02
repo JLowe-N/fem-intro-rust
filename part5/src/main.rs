@@ -1,9 +1,9 @@
 fn main() {
-    let mut numbers = vec![2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
+    let numbers = vec![2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
 
     let (sum_of_nums, numbers) = sum(numbers);
     let (product_of_nums, numbers) = product(numbers);
-    let (average_of_nums, numbers) = average(numbers); // 👉 TODO call average() and put answer here
+    let (average_of_nums, _) = average(numbers);
 
     println!("Sum of these numbers: {}", sum_of_nums);
     println!("Product of these numbers: {}", product_of_nums);
